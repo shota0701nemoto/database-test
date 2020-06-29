@@ -1,5 +1,5 @@
 
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8" />
+<head><meta charset="UTF-8" />
   <title>Lovely[ラブリー]｜恋する女子のライフマガジン</title>
   <meta name="description" content="Lovelyは恋する女子のためのライフマガジンです。カップル・浮気・片思い・失恋・出会い・デート・出会い・結婚・占い・エンタメなどの記事をまとめ読みできる" />
   <meta name="keywords" content="lovely,ラブリー,恋愛,占い" />
@@ -17,24 +17,20 @@
 
 </head><body id="top">
 
-  <!-- End Google Tag Manager (noscript) -->
   <header class="l-globalHeader">
     <div class="l-globalHeaderWrap">
       <div class="l-globalHeader_inner">
-        <a href="/"><img alt="Lovely" src="https://s3-ap-northeast-1.amazonaws.com/static.lovely-media.jp/assets/logo-ca93e233bdcf12029bb1baa0912e88df898492eab475c5fff83d20e33ff29785.png" />
+        <a href="/"><img alt="" />
           <h1>自分らしくかわいく生きる</h1>
         </a>
-          <div class="search">
-            <form action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-          </div>
       </div>
-  </header>
+    </header>
     <div class="l-contents u-clearfix">
       <main class="l-contentsMain">
         <div class="p-topMain u-clearfix">
           <div class="p-topMainCategory">
-          <ul>
-            <li class="all">総合</li>
+            <ul>
+              <li class="all">総合</li>
               <li><a href="">カテゴリ</a></li>
               <li><a href="">カテゴリ</a></li>
               <li><a href="">カテゴリ</a></li>
@@ -47,125 +43,189 @@
             </ul>
           </div>
           <div class="p-latests">
-    <div class="p-latestsHeading">
-
-    <h2>最新のまとめ</h2>
-      </div>
-
-        <div class="p-latestsPosts">
-          <% @articles.each do |article| %>
-          <div class="c-posts">
-            <ul>
-              <li>
-                <a>
-                  <div class="c-posts__eyecatch">
-                    <img alt="" class="lazyload" data-src="" title="">
-                     <noscript><img alt= ></noscript>
-                  </div>
+            <div class="p-latestsHeading">
+              <h2>最新のまとめ</h2>
+            </div>
+            <div class="p-latestsPosts">
+              <% @articles.each do |article| %>
+              <div class="c-posts">
+                <ul>
+                  <li>
                     <div class="c-postsContents">
-                      <span class="c-postsContentsTitle">記事タイトル</span>
-                        <p class="c-posts__description">ディスクリプション</p>
-                        <% end %>
+                      <span class="c-postsContentsTitle"><%= link_to (article.title), article_path(article)%></span>
                     </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="c-posts">
-            <ul>
-              <li>
-                <a href="/posts/18757">
-                  <div class="c-posts__eyecatch">
-                    <img alt="" class="lazyload" data-src="" title="">
-                     <noscript><img alt= ></noscript>
-                  </div>
-                    <div class="c-postsContents">
-                      <span class="c-postsContentsTitle">記事タイトル	</span>
+                  </li>
+                </ul>
+              </div>
+              <% end %>
+              <div class="c-posts">
+                <ul>
+                  <li>
+                    <a href="/posts/18757">
+                      <div class="c-posts__eyecatch">
+                        <img alt="" class="lazyload" data-src="" title="">
+                        <noscript><img alt= ></noscript>
+                      </div>
+                      <div class="c-postsContents">
+                        <span class="c-postsContentsTitle">記事タイトル	</span>
                         <p class="c-posts__description">ディスクリプション</p>
-                    </div>
-                </a>
-              </li>
-            </ul>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="pagination">
+                <span class="page current">1</span>
+                <span class="page"><a rel="next" href="/?page=2">2</a></span>
+                <span class="page"><a href="/?page=3">3</a></span>
+                <span class="page"><a href="/?page=4">4</a></span>
+                <span class="page gap">...</span>
+                <span class="next"><a rel="next" href="/?page=2">次へ</a></span>
+                <span class="last"><a href="/?page=677">最後へ</a></span>
+              </nav>
+            </div>
           </div>
-<nav class="pagination">
-  <span class="page current">1</span>
-  <span class="page"><a rel="next" href="/?page=2">2</a></span>
-  <span class="page"><a href="/?page=3">3</a></span>
-  <span class="page"><a href="/?page=4">4</a></span>
-  <span class="page gap">...</span>
-  <span class="next"><a rel="next" href="/?page=2">次へ</a></span>
-  <span class="last"><a href="/?page=677">最後へ</a></span>
-</nav>
- </div>
-</div>
- </div>
- </main>
- <div class="l-contentsSub"><div class="c-ranking"><div class="c-rankingHeading"><div class="heading">人気の記事</div><div class="sub">人気のあるまとめランキング</div></div><div class="c-rankingWrap"><ul><link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-      <script type="text/javascript">
-        $(document).ready(function(){
-          $('.slider').bxSlider({
-            touchEnabled:false,
-            auto: true,
-            pause: 5000,
-          });
-        });
-      </script>
-
-      <div class="slider">
-        <a href=""></a>
-        <a href=""></a>
-      </div>
+        </div>
+      </main>
+      <div class="l-contentsSub"><div class="c-ranking">
+        <div class="c-rankingHeading">
+          <div class="heading">人気の記事</div>
+            <div class="sub">人気のあるまとめランキング</div>
+        </div>
+        <div class="c-rankingWrap"><ul><link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+            <div class="slider">
+            <a href=""></a>
+            <a href=""></a>
+            </div>
         <li>
           <a href="/posts/15617">
-            <div class="c-ranking__thumb c-ranking__thumb--1">
-              <span class="rank rank--1">1</span>
-              <img alt=>
-              <noscript>
-                <img alt=>
-              </noscript>
+            <% @articles.each do |article| %>
+            <div class="c-ranking__text"><span class="c-ranking__title"><%= link_to (article.title), article_path(article)%></span>
+              <% end %>
             </div>
-              <div class="c-ranking__text"><span class="c-ranking__title">記事タイトル</span>
-                </div>
-                  </a>
+          </a>
         </li>
-                    </ul>
-                    </div>
-                  </div>
-                </div>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<footer class="l-globalFooter">
+  <div class="l-globalFooterWrap">
+    <div class="l-globalFooterInner">
+      <div class="l-globalFooterTopLink">
+        <a class="scroll" href="#top">
+          <img src="https://s3-ap-northeast-1.amazonaws.com/static.lovely-media.jp/assets/favicon-41f08ef0e6e1dd416946a83c7800a20034a3c6b9aaa881c4acd66725bc27af6b.ico" alt="Favicon" />
+          <p>ページの先頭へ</p>
+        </a>
+      </div>
+        <div class="l-globalFooterMenuWrap u-clearfix">
+          <ul class="l-globalFooterMenuList u-clearfix">
+            <li class="l-globalFooterMenuItem u-ta-left">
+              <a href="/">
+                <img src="https://s3-ap-northeast-1.amazonaws.com/static.lovely-media.jp/assets/logo-ca93e233bdcf12029bb1baa0912e88df898492eab475c5fff83d20e33ff29785.png" alt="Logo" />
+              </a>
+              <p class="u-mt-10">Lovelyは恋する女子のためのライフマガジンです。</p>
+              <div class="l-globalFooterSns">
+                <a target="_blank" href="https://twitter.com/LovelyMediaInfo">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                  <a target="_blank" href="https://www.instagram.com/lovely.jp_manga/?hl=ja">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="https://line.me/R/ti/p/%40298gohhc">
+                  <img style="width: 22px; height: 22px; margin: 0; padding-top: 2px" src="https://s3-ap-northeast-1.amazonaws.com/static.lovely-media.jp/resources/line.svg" alt="Line" />
+                </a>
               </div>
-              <footer class="l-globalFooter"><div class="l-globalFooterWrap"><div class="l-globalFooterInner"><div class="l-globalFooterTopLink"><a class="scroll" href="#top"><img src="https://s3-ap-northeast-1.amazonaws.com/static.lovely-media.jp/assets/favicon-41f08ef0e6e1dd416946a83c7800a20034a3c6b9aaa881c4acd66725bc27af6b.ico" alt="Favicon" /><p>ページの先頭へ</p></a></div><div class="l-globalFooterMenuWrap u-clearfix"><ul class="l-globalFooterMenuList u-clearfix"><li class="l-globalFooterMenuItem u-ta-left"><a href="/"><img src="https://s3-ap-northeast-1.amazonaws.com/static.lovely-media.jp/assets/logo-ca93e233bdcf12029bb1baa0912e88df898492eab475c5fff83d20e33ff29785.png" alt="Logo" /></a><p class="u-mt-10">Lovelyは恋する女子のためのライフマガジンです。</p><div class="l-globalFooterSns"><a target="_blank" href="https://twitter.com/LovelyMediaInfo"><i class="fa fa-twitter"></i></a><a target="_blank" href="https://www.instagram.com/lovely.jp_manga/?hl=ja"><i class="fa fa-instagram"></i></a><a href="https://line.me/R/ti/p/%40298gohhc"><img style="width: 22px; height: 22px; margin: 0; padding-top: 2px" src="https://s3-ap-northeast-1.amazonaws.com/static.lovely-media.jp/resources/line.svg" alt="Line" /></a></div></li><li class="l-globalFooterMenuItem"><h3>カテゴリ一覧</h3><ul><li><a href="/category/%E6%81%8B%E6%84%9B">恋愛</a></li><li><a href="/category/%E3%83%95%E3%82%A1%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3">ファッション</a></li><li><a href="/category/%E3%83%A1%E3%82%A4%E3%82%AF%E3%83%BB%E3%82%B3%E3%82%B9%E3%83%A1">メイク・コスメ</a></li><li><a href="/category/%E3%83%98%E3%82%A2%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB">ヘアスタイル</a></li><li><a href="/category/%E7%BE%8E%E5%AE%B9">美容</a></li><li><a href="/category/%E5%8D%A0%E3%81%84">占い</a></li><li><a href="/category/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB">ライフスタイル</a></li><li><a href="/category/%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%A1">エンタメ</a></li><li><a href="/category/%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E6%BC%AB%E7%94%BB">オリジナル漫画</a></li></ul></li><li class="l-globalFooterMenuItem"><h3>Lovelyについて</h3><ul class="u-clearfix"><li><a href="/autoinput">キーワード一覧</a></li><li><a href="/inquiry">お問い合せ</a></li><li><a href="/post_writers">ライター一覧</a></li><li><a href="/page/sitemap">サイトマップ</a></li><li><a href="/about">運営者情報</a></li><li><a href="/feed/items_rss.xml">RSS</a></li></ul></li></ul></div></div></div></footer><div class="l-globalFooter_cr">Copyright (C) Lovely</div><script>var cb = function() {
-        var l2 = document.createElement('link'); l2.rel = 'stylesheet';
-        l2.href = "https://fonts.googleapis.com/css?family=Allura|Amatic+SC";
-        var h2 = document.getElementsByTagName('head')[0]; h2.parentNode.insertBefore(l2, h2);
-        var l3 = document.createElement('link'); l3.rel = 'stylesheet';
-        l3.href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-        var h3 = document.getElementsByTagName('head')[0]; h3.parentNode.insertBefore(l3, h3);
-      };
+            </li>
+            <li class="l-globalFooterMenuItem">
+              <h3>カテゴリ一覧</h3>
+              <ul>
+                <li>
+                  <a href="/category/%E6%81%8B%E6%84%9B">恋愛</a>
+                </li>
+                <li>
+                  <a href="/category/%E3%83%95%E3%82%A1%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3">ファッション</a>
+                </li>
+                <li>
+                  <a href="/category/%E3%83%A1%E3%82%A4%E3%82%AF%E3%83%BB%E3%82%B3%E3%82%B9%E3%83%A1">メイク・コスメ</a>
+                </li>
+                <li>
+                  <a href="/category/%E3%83%98%E3%82%A2%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB">ヘアスタイル</a>
+                </li>
+                <li>
+                  <a href="/category/%E7%BE%8E%E5%AE%B9">美容</a>
+                </li>
+                <li>
+                  <a href="/category/%E5%8D%A0%E3%81%84">占い</a>
+                </li>
+                <li>
+                  <a href="/category/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB">ライフスタイル</a>
+                </li>
+                <li>
+                  <a href="/category/%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%A1">エンタメ</a>
+                </li>
+                <li>
+                  <a href="/category/%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E6%BC%AB%E7%94%BB">オリジナル漫画</a>
+                </li>
+              </ul>
+            </li>
+            <li class="l-globalFooterMenuItem">
+              <h3>Lovelyについて</h3>
+              <ul class="u-clearfix">
+                <li>
+                  <a href="/autoinput">キーワード一覧</a>
+                </li>
+                <li>
+                  <a href="/inquiry">お問い合せ</a>
+                </li>
+                <li>
+                  <a href="/post_writers">ライター一覧</a>
+                </li>
+                <li>
+                  <a href="/page/sitemap">サイトマップ</a>
+                </li>
+                <li>
+                  <a href="/about">運営者情報</a>
+                </li>
+                <li>
+                  <a href="/feed/items_rss.xml">RSS</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</footer>
+<div class="l-globalFooter_cr">Copyright (C) Lovely
+</div>
+<script>var cb = function() {
+  var l2 = document.createElement('link'); l2.rel = 'stylesheet';
+  l2.href = "https://fonts.googleapis.com/css?family=Allura|Amatic+SC";
+  var h2 = document.getElementsByTagName('head')[0]; h2.parentNode.insertBefore(l2, h2);
+  var l3 = document.createElement('link'); l3.rel = 'stylesheet';
+  l3.href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+  var h3 = document.getElementsByTagName('head')[0]; h3.parentNode.insertBefore(l3, h3);
+};
 
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-      webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);</script></body><script src="https://cdnjs.cloudflare.com/ajax/libs/script.js/2.5.8/script.min.js" async="async" onload="initJs()"></script><script>function initJs() {
-        $script([
-        'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.1/lazysizes.min.js',
-        ], 'bundle');
-        $script.ready('bundle', function() {
-          $script([
-          'https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js',
-          ], 'bundle-plugin');
-        });
-        $script.ready('bundle-plugin', function() {
-          $script("https://s3-ap-northeast-1.amazonaws.com/static.lovely-media.jp/assets/service/application-35d3952a08f2454f52da392a3d580538f45b8c513cd04c7bb159ab6381db9222.js");
-        });
-      }</script><script async="" src="https://www.instagram.com/static/bundles/es6/EmbedSDK.js/2fe3a16f6aeb.js"></script></html>
-
-
-
-
-
-
-      
+var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+webkitRequestAnimationFrame || msRequestAnimationFrame;
+if (raf) raf(cb);
+else window.addEventListener('load', cb);
+</script></body><script src="https://cdnjs.cloudflare.com/ajax/libs/script.js/2.5.8/script.min.js" async="async" onload="initJs()"></script><script>function initJs() {
+  $script([
+  'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.1/lazysizes.min.js',
+  ], 'bundle');
+  $script.ready('bundle', function() {
+    $script([
+    'https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js',
+    ], 'bundle-plugin');
+  });
+  $script.ready('bundle-plugin', function() {
+    $script("https://s3-ap-northeast-1.amazonaws.com/static.lovely-media.jp/assets/service/application-35d3952a08f2454f52da392a3d580538f45b8c513cd04c7bb159ab6381db9222.js");
+  });
+}</script><script async="" src="https://www.instagram.com/static/bundles/es6/EmbedSDK.js/2fe3a16f6aeb.js"></script></html>

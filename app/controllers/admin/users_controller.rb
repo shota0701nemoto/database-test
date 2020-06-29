@@ -3,6 +3,7 @@ class Admin::UsersController < ApplicationController
 
   def index
     @users = User.all.order("created_at DESC")
+    @articles = Article.all
   end
 
   private

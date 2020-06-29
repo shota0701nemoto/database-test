@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
+    #@related_articles = 
   end
 
   # GET /articles/1
@@ -28,8 +29,8 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: '公開されました' }
-        format.json { render :show, status: :created, location: @article }
+        format.html { redirect_to new_admin_article_path, notice: '公開されましたあ' }
+        #format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new }
         format.json { render json: @article.errors, status: :unprocessable_entity }
@@ -42,7 +43,7 @@ class ArticlesController < ApplicationController
   def update
     respond_to do |format|
       if @article.update(article_params)
-        format.html { redirect_to @article, notice: '更新されました' }
+        format.html { redirect_to edit_admin_article_path, notice: '更新しましたあ' }
         format.json { render :show, status: :ok, location: @article }
       else
         format.html { render :edit }

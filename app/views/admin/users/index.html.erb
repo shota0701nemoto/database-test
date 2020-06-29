@@ -1,5 +1,12 @@
 
 
 <h1>管理画面</h1>
-<p>記事を投稿する</p>
+<h2>記事を投稿する</h2>
 <%= link_to '投稿する', new_admin_article_path %>
+
+<h2>投稿記事一覧</h2>
+<div class="admin-articlebox">
+<% @articles.each do |article| %>
+<%= link_to (article.title), edit_admin_article_path(article)%>
+<% end %>
+</div>
