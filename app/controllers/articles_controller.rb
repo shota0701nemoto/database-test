@@ -5,12 +5,14 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
-    #@related_articles = 
+    #@related_articles =
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @article = Article.find(params[:id])
+    #@related_articles = Article.sample(5)
   end
 
   # GET /articles/new
